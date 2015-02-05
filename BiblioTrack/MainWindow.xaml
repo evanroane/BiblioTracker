@@ -17,10 +17,10 @@
         <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Orientation="Horizontal">
             <Button Content="Add New Volume" Margin="5,40,0,0" Width="150" Height="30"/>
         </StackPanel>
-        <StackPanel HorizontalAlignment="Right" VerticalAlignment="Bottom" Background="#FF686868" Height="150" Width="200" Margin="0,0,5,5">
-            <TextBox x:Name="Total_Volumes_Box" Height="23" TextWrapping="Wrap" Text="Total Volumes:" IsReadOnly="true" Background="#FF686868" BorderThickness="0,0,0,1"></TextBox>
-            <TextBox x:Name="For_Sale_Box" Height="23" TextWrapping="Wrap" Text="For Sale:" IsReadOnly="true" Background="#FF686868" BorderThickness="0,0,0,1"></TextBox>
-            <TextBox x:Name="Sold_Box" Height="23" TextWrapping="Wrap" Text="Sold:" IsReadOnly="true" Background="#FF686868" BorderThickness="0,0,0,1"></TextBox>
+        <StackPanel HorizontalAlignment="Right" VerticalAlignment="Bottom" Background="#F2686868" Height="150" Width="200" Margin="0,0,5,5">
+            <TextBox x:Name="Total_Volumes_Box" Height="23" TextWrapping="Wrap" Text="Total Volumes:" IsReadOnly="true" Background="#F2686868" BorderThickness="0,0,0,1"></TextBox>
+            <TextBox x:Name="For_Sale_Box" Height="23" TextWrapping="Wrap" Text="For Sale:" IsReadOnly="true" Background="#F2686868" BorderThickness="0,0,0,1"></TextBox>
+            <TextBox x:Name="Sold_Box" Height="23" TextWrapping="Wrap" Text="Sold:" IsReadOnly="true" Background="#F2686868" BorderThickness="0,0,0,1"></TextBox>
         </StackPanel>
     </Grid>
 </Window>
