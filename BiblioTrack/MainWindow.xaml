@@ -7,20 +7,20 @@
             <ImageBrush ImageSource="background.jpg" Stretch="UniformToFill"/>
         </Grid.Background>
         <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Orientation="Horizontal">
-            <ComboBox HorizontalAlignment="Left" Margin="5,5,0,0" Width="150" Height="30">
-                <ListBoxItem Content="All Items"/>
-                <ListBoxItem Content="For Sale"/>
-                <ListBoxItem Content="Sold"/>
+            <ComboBox HorizontalAlignment="Left" Margin="5,5,0,0" Width="150" Height="30" x:Name="Combo_Categories">
+                <ListBoxItem x:Name="Item_All" Content="All Items"/>
+                <ListBoxItem x:Name="Item_For_Sale" Content="For Sale"/>
+                <ListBoxItem x:Name="Item_Sold" Content="Sold"/>
             </ComboBox>
-            <Button Content="View Collection Category" Margin="5,5,0,0" Width="150" Height="30"/>
+            <Button x:Name="Button_View" Content="View Collection Category" Margin="5,5,0,0" Width="150" Height="30"/>
         </StackPanel>
         <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Orientation="Horizontal">
-            <Button Content="Add New Volume" Margin="5,40,0,0" Width="150" Height="30"/>
+            <Button x:Name="Button_Add" Content="Add New Volume" Margin="5,40,0,0" Width="150" Height="30"/>
         </StackPanel>
-        <StackPanel HorizontalAlignment="Right" VerticalAlignment="Bottom" Background="#F2686868" Height="150" Width="200" Margin="0,0,5,5">
-            <TextBox x:Name="Total_Volumes_Box" Height="23" TextWrapping="Wrap" Text="Total Volumes:" IsReadOnly="true" Background="#F2686868" BorderThickness="0,0,0,1"></TextBox>
-            <TextBox x:Name="For_Sale_Box" Height="23" TextWrapping="Wrap" Text="For Sale:" IsReadOnly="true" Background="#F2686868" BorderThickness="0,0,0,1"></TextBox>
-            <TextBox x:Name="Sold_Box" Height="23" TextWrapping="Wrap" Text="Sold:" IsReadOnly="true" Background="#F2686868" BorderThickness="0,0,0,1"></TextBox>
+        <StackPanel HorizontalAlignment="Right" VerticalAlignment="Bottom" Background="#E5686868" Height="150" Width="200" Margin="0,0,5,5">
+            <TextBox x:Name="Box_Total_Volumes" Height="23" TextWrapping="Wrap" Text="Total Volumes:" IsReadOnly="true" Background="#E5686868" BorderThickness="0,0,0,1"></TextBox>
+            <TextBox x:Name="Box_For_Sale" Height="23" TextWrapping="Wrap" Text="For Sale:" IsReadOnly="true" Background="#E5686868" BorderThickness="0,0,0,1"></TextBox>
+            <TextBox x:Name="Box_Sold" Height="23" TextWrapping="Wrap" Text="Sold:" IsReadOnly="true" Background="#E5686868" BorderThickness="0,0,0,1"></TextBox>
         </StackPanel>
     </Grid>
 </Window>
