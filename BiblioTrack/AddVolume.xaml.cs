@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace BiblioTrack
 {
     /// <summary>
-    /// Interaction logic for Window1.xaml
+    /// Interaction logic for AddVolume.xaml
     /// </summary>
-    public partial class Window1 : Window
+    public partial class AddVolume : Window
     {
-        public Window1()
+        public AddVolume()
         {
             InitializeComponent();
         }

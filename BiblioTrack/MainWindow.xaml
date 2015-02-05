@@ -7,15 +7,15 @@
             <ImageBrush ImageSource="background.jpg" Stretch="UniformToFill"/>
         </Grid.Background>
         <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Orientation="Horizontal">
-            <ComboBox HorizontalAlignment="Left" Margin="5,5,0,0" Width="150" Height="30" x:Name="Combo_Categories">
-                <ListBoxItem x:Name="Item_All" Content="All Items"/>
-                <ListBoxItem x:Name="Item_For_Sale" Content="For Sale"/>
-                <ListBoxItem x:Name="Item_Sold" Content="Sold"/>
+            <ComboBox SelectedIndex="0" HorizontalAlignment="Left" Margin="5,5,0,0" Width="150" Height="30" x:Name="Combo_Categories">
+                <ComboBoxItem x:Name="Item_All" Content="All Items"/>
+                <ComboBoxItem x:Name="Item_For_Sale" Content="For Sale"/>
+                <ComboBoxItem x:Name="Item_Sold" Content="Sold"/>
             </ComboBox>
             <Button x:Name="Button_View" Content="View Collection Category" Margin="5,5,0,0" Width="150" Height="30"/>
         </StackPanel>
         <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Orientation="Horizontal">
-            <Button x:Name="Button_Add" Content="Add New Volume" Margin="5,40,0,0" Width="150" Height="30"/>
+            <Button x:Name="Button_Add" Content="Add New Volume" Margin="5,40,0,0" Width="150" Height="30" Click="Button_Add_Click"/>
         </StackPanel>
         <StackPanel HorizontalAlignment="Right" VerticalAlignment="Bottom" Background="#E5686868" Height="150" Width="200" Margin="0,0,5,5">
             <TextBox x:Name="Box_Total_Volumes" Height="23" TextWrapping="Wrap" Text="Total Volumes:" IsReadOnly="true" Background="#E5686868" BorderThickness="0,0,0,1"></TextBox>

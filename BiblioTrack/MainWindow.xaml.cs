@@ -24,5 +24,11 @@ namespace BiblioTrack
         {
             InitializeComponent();
         }
+
+        private void Button_Add_Click(object sender, RoutedEventArgs e)
+        {
+            var addVolume = new AddVolume();
+            addVolume.Show();
+        }
     }
 }

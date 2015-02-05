@@ -1,7 +1,7 @@
-﻿<Window x:Name="AddVolume" x:Class="BiblioTrack.Window1"
+﻿<Window x:Class="BiblioTrack.AddVolume"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Add Volume" Height="300" Width="561">
+        Title="AddVolume" Height="300" Width="300">
     <Grid>
         
     </Grid>
