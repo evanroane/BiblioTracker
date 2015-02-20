@@ -1,12 +1,12 @@
 ﻿using System;
+using System.Data.Entity;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using BiblioTrack;
-using System.Data.Entity;
 using BiblioTrack.Repository;
-using System.Collections.ObjectModel;
+using BiblioTrack;
 
 namespace BiblioTrack.Repository
 {
@@ -63,7 +63,8 @@ namespace BiblioTrack.Repository
         //Delete
         public void DeleteVolume(Model.Volume V)
         {
-            throw new NotImplementedException();
+            _dbContext.Volumes.Remove(V);
+            _dbContext.SaveChanges();
         }
 
         public void Clear()

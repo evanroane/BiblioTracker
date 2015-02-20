@@ -47,9 +47,10 @@ namespace TestBiblioTrack
         public void TestDeleteVolume()
         {
             repo.Clear();
-            repo.Add(new Volume("Tom", "Robbins", "Villa Incognito"));
+            var vol = new Volume("Tom", "Robbins", "Villa Incognito"); 
+            repo.Add(vol);
             Assert.AreEqual(1, repo.GetCount());
-            repo.DeleteVolume(new Volume("Tom", "Robbins", "Villa Incognito"));
+            repo.DeleteVolume(vol);
             Assert.AreEqual(0, repo.GetCount());
         }
 
