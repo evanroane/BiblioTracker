@@ -12,6 +12,10 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Data.Entity;
+using BiblioTrack;
+using BiblioTrack.Model;
+using BiblioTrack.Repository;
 
 namespace BiblioTrack
 {
@@ -20,9 +24,12 @@ namespace BiblioTrack
     /// </summary>
     public partial class MainWindow : Window
     {
+        //public static VolumeRepository repo = new VolumeRepository();
+
         public MainWindow()
         {
             InitializeComponent();
+            //repo.GetCount();
         }
 
         private void Button_Add_Click(object sender, RoutedEventArgs e)

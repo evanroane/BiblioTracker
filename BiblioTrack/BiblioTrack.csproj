@@ -37,8 +37,16 @@
     <Reference Include="Castle.Core">
       <HintPath>..\packages\Castle.Core.3.3.0\lib\net45\Castle.Core.dll</HintPath>
     </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.2\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.2\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
@@ -67,6 +75,10 @@
     <Compile Include="AddVolume.xaml.cs">
       <DependentUpon>AddVolume.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Model\Volume.cs" />
+    <Compile Include="Repository\IVolumeRepository.cs" />
+    <Compile Include="VolumeContext.cs" />
+    <Compile Include="Repository\VolumeRepository.cs" />
     <Compile Include="ViewVolumes.xaml.cs">
       <DependentUpon>ViewVolumes.xaml</DependentUpon>
     </Compile>

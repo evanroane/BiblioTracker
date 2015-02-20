@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BiblioTrack", "BiblioTrack\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UITests", "UITests\UITests.csproj", "{DEE7668B-EABE-4495-A094-1176B51AA2F3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserStoryTests", "UserStoryTests\UserStoryTests.csproj", "{15E5D764-12D9-4851-8D19-EAAA20B3F6BB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestBiblioTrack", "TestBiblioTrack\TestBiblioTrack.csproj", "{B3A0D027-7156-416A-B477-FBE38F495D63}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{DEE7668B-EABE-4495-A094-1176B51AA2F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DEE7668B-EABE-4495-A094-1176B51AA2F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DEE7668B-EABE-4495-A094-1176B51AA2F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15E5D764-12D9-4851-8D19-EAAA20B3F6BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15E5D764-12D9-4851-8D19-EAAA20B3F6BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15E5D764-12D9-4851-8D19-EAAA20B3F6BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15E5D764-12D9-4851-8D19-EAAA20B3F6BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3A0D027-7156-416A-B477-FBE38F495D63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3A0D027-7156-416A-B477-FBE38F495D63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3A0D027-7156-416A-B477-FBE38F495D63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3A0D027-7156-416A-B477-FBE38F495D63}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

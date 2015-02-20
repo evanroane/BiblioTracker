@@ -61,7 +61,7 @@ namespace UITests
             Assert.AreEqual(box_sold_num.Text, "0");
             Assert.AreEqual(combo_categories.Item(0).Text, "All Items");
             Assert.AreEqual(combo_categories.Item(1).Text, "For Sale");
-            Assert.AreEqual(combo_categories.Items[2].Text, "Sold");
+            Assert.AreEqual(combo_categories.Item(2).Text, "Sold");
 
             //Check that secondary windows are not initialized at zero state
         }
