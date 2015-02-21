@@ -14,6 +14,7 @@ namespace UITests
     {
         private static TestContext test_context;
         private static Window window;
+        private static Window win_add;
         private static Application application;
 
         [ClassInitialize]
@@ -24,11 +25,10 @@ namespace UITests
             var applicationPath = Path.Combine(applicationDir, "..\\..\\..\\UITests\\bin\\Debug\\BiblioTrack");
             application = Application.Launch(applicationPath);
             window = application.GetWindow("BiblioTracker", InitializeOption.NoCache);
-
         }
 
         [TestMethod]
-        public void TestZeroState()
+        public void TestMainWindowZeroState()
         {
             //Get elements for local refrence
             ComboBox combo_categories = window.Get<ComboBox>("Combo_Categories");
@@ -41,7 +41,7 @@ namespace UITests
             TextBox box_for_sale_num = window.Get<TextBox>("Box_For_Sale_Num");
             TextBox box_sold_num = window.Get<TextBox>("Box_Sold_Num");
 
-            //Describbe state of individual elements at zero state
+            //Describe state of individual elements at zero state
             Assert.IsTrue(button_view.Enabled);
             Assert.IsTrue(button_add.Enabled);
             Assert.IsTrue(combo_categories.Enabled);
@@ -62,8 +62,6 @@ namespace UITests
             Assert.AreEqual(combo_categories.Item(0).Text, "All Items");
             Assert.AreEqual(combo_categories.Item(1).Text, "For Sale");
             Assert.AreEqual(combo_categories.Item(2).Text, "Sold");
-
-            //Check that secondary windows are not initialized at zero state
         }
 
         [ClassCleanup]
