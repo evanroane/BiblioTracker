@@ -11,6 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using BiblioTrack.Repository;
+using BiblioTrack.Model;
 
 namespace BiblioTrack
 {
@@ -19,6 +21,8 @@ namespace BiblioTrack
     /// </summary>
     public partial class AddVolume : Window
     {
+        private VolumeRepository repo;
+        private Volume vol;
         public AddVolume()
         {
             InitializeComponent();
@@ -26,7 +30,15 @@ namespace BiblioTrack
 
         private void Save_Vol_Click(object sender, RoutedEventArgs e)
         {
-
+            repo = new VolumeRepository();
+            string auth_first_name = Auth_First_Name.Text;
+            string auth_last_name = Auth_Last_Name.Text;
+            string vol_title = Vol_Title.Text;
+            vol = new Volume(auth_first_name, auth_last_name, vol_title);
+            repo.Add(vol);
+            Auth_First_Name.Text = "";
+            Auth_Last_Name.Text = "";
+            Vol_Title.Text = "";
         }
     }
 }
