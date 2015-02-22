@@ -37,5 +37,11 @@ namespace BiblioTrack
             var addVolume = new AddVolume();
             addVolume.Show();
         }
+
+        private void Button_View_Click(object sender, RoutedEventArgs e)
+        {
+            var viewVolume = new ViewLibrary();
+            viewVolume.Show();
+        }
     }
 }

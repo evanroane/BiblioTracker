@@ -77,11 +77,11 @@
     </Compile>
     <Compile Include="Model\Volume.cs" />
     <Compile Include="Repository\IVolumeRepository.cs" />
+    <Compile Include="ViewLibrary.xaml.cs">
+      <DependentUpon>ViewLibrary.xaml</DependentUpon>
+    </Compile>
     <Compile Include="VolumeContext.cs" />
     <Compile Include="Repository\VolumeRepository.cs" />
-    <Compile Include="ViewVolumes.xaml.cs">
-      <DependentUpon>ViewVolumes.xaml</DependentUpon>
-    </Compile>
     <Page Include="AddVolume.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -98,7 +98,7 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="ViewVolumes.xaml">
+    <Page Include="ViewLibrary.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

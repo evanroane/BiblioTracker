@@ -11,17 +11,27 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using BiblioTrack.Repository;
+using BiblioTrack.Model;
 
 namespace BiblioTrack
 {
     /// <summary>
-    /// Interaction logic for Window2.xaml
+    /// Interaction logic for ViewLibrary.xaml
     /// </summary>
-    public partial class Window2 : Window
+    public partial class ViewLibrary : Window
     {
-        public Window2()
+        private VolumeRepository repo;
+        public ViewLibrary()
         {
             InitializeComponent();
+        }
+
+        private void DataGrid_Loaded(object sender, RoutedEventArgs e)
+        {
+            repo = new VolumeRepository();
+            var grid = sender as DataGrid;
+            grid.ItemsSource = repo.All();
         }
     }
 }

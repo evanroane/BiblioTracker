@@ -12,7 +12,7 @@
                 <ComboBoxItem x:Name="Item_For_Sale" Content="For Sale"/>
                 <ComboBoxItem x:Name="Item_Sold" Content="Sold"/>
             </ComboBox>
-            <Button x:Name="Button_View" Content="View Collection Category" Margin="5,5,0,0" Width="162" Height="30" FontSize="14"/>
+            <Button x:Name="Button_View" Content="View Collection Category" Margin="5,5,0,0" Width="162" Height="30" FontSize="14" Click="Button_View_Click"/>
         </StackPanel>
         <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Orientation="Horizontal">
             <Button x:Name="Button_Add" Content="Add New Volume" Margin="5,40,0,0" Width="150" Height="30" Click="Button_Add_Click" FontSize="14"/>
