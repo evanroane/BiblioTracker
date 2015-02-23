@@ -14,7 +14,6 @@ namespace UITests
     {
         private static TestContext test_context;
         private static Window window;
-        private static Window win_add;
         private static Application application;
 
         [ClassInitialize]

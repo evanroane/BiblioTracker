@@ -11,8 +11,9 @@ namespace BiblioTrack.Repository
     public interface IVolumeRepository
     {
         int GetCount();
-        void Add(Volume E);
-        void DeleteVolume(Volume E);
+        void Add(Volume V);
+        void DeleteVolume(Volume V);
+        void UpdateVolume(Volume V);
         void Clear();
         IEnumerable<Volume> All();
         Volume GetById(int id);

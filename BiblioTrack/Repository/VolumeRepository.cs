@@ -59,6 +59,10 @@ namespace BiblioTrack.Repository
         }
 
         //Update
+        public void UpdateVolume(Model.Volume V)
+        {
+            throw new NotImplementedException();
+        }
 
         //Delete
         public void DeleteVolume(Model.Volume V)

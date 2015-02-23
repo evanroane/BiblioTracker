@@ -29,7 +29,6 @@ namespace BiblioTrack
         public MainWindow()
         {
             InitializeComponent();
-            Box_Total_Volumes_Num.DataContext = repo.GetCount();
         }
 
         private void Button_Add_Click(object sender, RoutedEventArgs e)
