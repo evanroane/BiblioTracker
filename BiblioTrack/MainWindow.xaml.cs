@@ -24,12 +24,12 @@ namespace BiblioTrack
     /// </summary>
     public partial class MainWindow : Window
     {
-        //public static VolumeRepository repo = new VolumeRepository();
+        public static VolumeRepository repo = new VolumeRepository();
 
         public MainWindow()
         {
             InitializeComponent();
-            //repo.GetCount();
+            Box_Total_Volumes_Num.DataContext = repo.GetCount();
         }
 
         private void Button_Add_Click(object sender, RoutedEventArgs e)
