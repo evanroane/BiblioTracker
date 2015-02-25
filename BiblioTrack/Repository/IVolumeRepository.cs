@@ -4,7 +4,9 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
+using System.Collections;
 using BiblioTrack.Model;
+using System.Collections.ObjectModel;
 
 namespace BiblioTrack.Repository
 {
@@ -15,7 +17,7 @@ namespace BiblioTrack.Repository
         void DeleteVolume(Volume V);
         void UpdateVolume(Volume V);
         void Clear();
-        IEnumerable<Volume> All();
+        ObservableCollection<Volume> All();
         Volume GetById(int id);
         IQueryable<Volume> SearchFor(Expression<Func<Volume, bool>> predicate);
     }

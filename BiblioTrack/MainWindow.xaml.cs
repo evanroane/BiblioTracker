@@ -16,6 +16,7 @@ using System.Data.Entity;
 using BiblioTrack;
 using BiblioTrack.Model;
 using BiblioTrack.Repository;
+using System.Collections.ObjectModel;
 
 namespace BiblioTrack
 {
@@ -24,11 +25,16 @@ namespace BiblioTrack
     /// </summary>
     public partial class MainWindow : Window
     {
-        public static VolumeRepository repo = new VolumeRepository();
-
+        //public IEnumerable<Model.Volume> Volumes { get; set; }
+        public static VolumeRepository repo { get; set; }
+        public static ObservableCollection<Model.Volume> col; 
         public MainWindow()
         {
             InitializeComponent();
+            repo = new VolumeRepository();
+            col = repo.All(); 
+            ViewPort.DataContext = col;
+            //ViewPort.DataContext = repo.Context().Volumes.Local;
         }
 
         private void Button_Add_Click(object sender, RoutedEventArgs e)
@@ -37,10 +43,5 @@ namespace BiblioTrack
             addVolume.Show();
         }
 
-        private void Button_View_Click(object sender, RoutedEventArgs e)
-        {
-            var viewVolume = new ViewLibrary();
-            viewVolume.Show();
-        }
     }
 }

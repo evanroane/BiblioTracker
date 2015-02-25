@@ -20,6 +20,16 @@ namespace BiblioTrack.Repository
             _dbContext.Volumes.Load();
         }
 
+        public VolumeContext Context()
+        {
+            return _dbContext;
+        }
+
+        public DbSet<Model.Volume> GetDbSet()
+        {
+            return _dbContext.Volumes;
+        }
+
         public int GetCount()
         {
             return _dbContext.Volumes.Count<Model.Volume>();
@@ -38,16 +48,18 @@ namespace BiblioTrack.Repository
         //Create
         public void Add(Model.Volume V)
         {
+            MainWindow.col.Add(V);
             _dbContext.Volumes.Add(V);
             _dbContext.SaveChanges();
         }
 
         //Read
-        public IEnumerable<Model.Volume> All()
+        public ObservableCollection<Model.Volume> All()
         {
             var query = from Volume in _dbContext.Volumes
                         select Volume;
-            return query.ToList<Model.Volume>();
+            //return query.ToList<Model.Volume>();
+            return new ObservableCollection<Model.Volume>(query);
         }
 
         public Model.Volume GetById(int id)

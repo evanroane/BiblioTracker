@@ -77,9 +77,6 @@
     </Compile>
     <Compile Include="Model\Volume.cs" />
     <Compile Include="Repository\IVolumeRepository.cs" />
-    <Compile Include="ViewLibrary.xaml.cs">
-      <DependentUpon>ViewLibrary.xaml</DependentUpon>
-    </Compile>
     <Compile Include="VolumeContext.cs" />
     <Compile Include="Repository\VolumeRepository.cs" />
     <Page Include="AddVolume.xaml">
@@ -98,10 +95,6 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="ViewLibrary.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">

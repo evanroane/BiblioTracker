@@ -98,31 +98,9 @@ namespace TestBiblioTrack
         //    repo = new VolumeRepository();
         //    repo.Clear();
         //    repo.Add(new Volume("Tom", "Robbins", "Villa Incognito"));
-        //    var all = repo.GetObservableVolumes()[0];
-        //    repo.GetById(all.VolumeId);
-
-        //    // Query for a specific volume. 
-        //    var volume =
-        //        (from v in repo.
-        //         where v.VolumeId == "ALFKI"
-        //         select v).First();
-
-        //    // Change the name of the contact.
-        //    volume.ContactName = "New Contact";
-
+            
 
         //    Assert.AreEqual("Smith", AuthorLastName);
-        //}
-
-        // Exception Tag: We want the Repository to throw an exception instead of adding duplicate
-        // events
-        //[TestMethod]
-        //[ExpectedException(typeof(ArgumentException))]
-        //public void EventsAreUnique()
-        //{
-        //    repo.Clear();
-        //    repo.Add(new Volume("Tom", "Robbins", "Villa Incognito"));
-        //    repo.Add(new Volume("Tom", "Robbins", "Villa Incognito"));
         //}
     }
 }

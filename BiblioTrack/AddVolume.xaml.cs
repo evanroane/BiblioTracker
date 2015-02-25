@@ -23,6 +23,7 @@ namespace BiblioTrack
     {
         private VolumeRepository repo;
         private Volume vol;
+        private IEnumerable<Volume> grid;
         public AddVolume()
         {
             InitializeComponent();
@@ -39,6 +40,7 @@ namespace BiblioTrack
             Auth_First_Name.Text = "";
             Auth_Last_Name.Text = "";
             Vol_Title.Text = "";
+            MainWindow.col = repo.All();
         }
     }
 }

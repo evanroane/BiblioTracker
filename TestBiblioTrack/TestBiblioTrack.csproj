@@ -47,6 +47,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Windows" />
     <Reference Include="TestStack.White">
       <HintPath>..\packages\TestStack.White.0.13.3\lib\net40\TestStack.White.dll</HintPath>
     </Reference>
@@ -66,6 +67,7 @@
   <ItemGroup>
     <Compile Include="VolumeRepositoryTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ZeroState.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BiblioTrack\BiblioTrack.csproj">
