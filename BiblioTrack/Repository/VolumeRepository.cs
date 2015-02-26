@@ -49,6 +49,7 @@ namespace BiblioTrack.Repository
         public void Add(Model.Volume V)
         {
             MainWindow.col.Add(V);
+            MainWindow.col = GetObservableVolumes();
             _dbContext.Volumes.Add(V);
             _dbContext.SaveChanges();
         }

@@ -5,6 +5,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using BiblioTrack;
 using BiblioTrack.Model;
 using BiblioTrack.Repository;
+using System.Collections.ObjectModel;
 
 namespace TestBiblioTrack
 {
@@ -70,7 +71,7 @@ namespace TestBiblioTrack
             repo.Add(new Volume("Tom", "Robbins", "Villa Incognito"));
             repo.Add(new Volume("Plato", "Aristocles", "Symposium"));
             var all = repo.All();
-            Assert.AreEqual(2, (all as List<Volume>).Count);
+            Assert.AreEqual(2, (all as ObservableCollection<Volume>).Count);
 
         }
 
@@ -86,6 +87,7 @@ namespace TestBiblioTrack
         [TestMethod]
         public void TestClear()
         {
+            repo.Clear();
             repo.Add(new Volume("Tom", "Robbins", "Villa Incognito"));
             Assert.AreEqual(1, repo.GetCount());
             repo.Clear();
@@ -95,7 +97,6 @@ namespace TestBiblioTrack
         //[TestMethod]
         //public void TestUpdate()
         //{
-        //    repo = new VolumeRepository();
         //    repo.Clear();
         //    repo.Add(new Volume("Tom", "Robbins", "Villa Incognito"));
             

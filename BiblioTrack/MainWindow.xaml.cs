@@ -32,7 +32,8 @@ namespace BiblioTrack
         {
             InitializeComponent();
             repo = new VolumeRepository();
-            col = repo.All(); 
+            col = repo.Context().Volumes.Local;
+            //col = repo.All(); 
             ViewPort.DataContext = col;
             //ViewPort.DataContext = repo.Context().Volumes.Local;
         }

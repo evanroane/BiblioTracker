@@ -23,7 +23,6 @@ namespace BiblioTrack
     {
         private VolumeRepository repo;
         private Volume vol;
-        private IEnumerable<Volume> grid;
         public AddVolume()
         {
             InitializeComponent();
