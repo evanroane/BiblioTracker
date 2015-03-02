@@ -26,20 +26,23 @@ namespace BiblioTrack
         public AddVolume()
         {
             InitializeComponent();
+            repo = new VolumeRepository();
         }
 
         private void Save_Vol_Click(object sender, RoutedEventArgs e)
         {
-            repo = new VolumeRepository();
             string auth_first_name = Auth_First_Name.Text;
             string auth_last_name = Auth_Last_Name.Text;
             string vol_title = Vol_Title.Text;
             vol = new Volume(auth_first_name, auth_last_name, vol_title);
-            repo.Add(vol);
+            var mainWindow = Application.Current.Windows
+                .Cast<Window>()
+                .FirstOrDefault(window => window is MainWindow) as MainWindow;
+            mainWindow.repo.Add(vol);
+            this.Hide();
             Auth_First_Name.Text = "";
             Auth_Last_Name.Text = "";
             Vol_Title.Text = "";
-            MainWindow.col = repo.All();
         }
     }
 }

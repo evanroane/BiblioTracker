@@ -61,7 +61,7 @@ namespace TestBiblioTrack
             repo.Clear();
             repo.Add(new Volume("Tom", "Robbins", "Villa Incognito"));
             var all = repo.GetObservableVolumes()[0];
-            Assert.AreEqual(all, repo.GetById(all.VolumeId));
+            Assert.AreEqual(all, repo.GetById(all.volumeId));
         }
 
 

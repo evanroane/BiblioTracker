@@ -10,61 +10,21 @@ namespace BiblioTrack.Model
 {
     public class Volume : INotifyPropertyChanged
     {
-        public int VolumeId { get; set; }
-        public string authorFirstNameValue;
-        public string authorLastNameValue;
-        public string volumeTitleValue;
+        public int volumeId { get; set; }
+        public string authorFirstName { get; set; }
+        public string authorLastName { get; set; }
+        public string volumeTitle { get; set; }
 
         public event PropertyChangedEventHandler PropertyChanged;
 
         public Volume() { }
 
         // NOTE: after changing this.values, either migrate or wipe db
-        public Volume(string afnv, string alnv, string vtv)
+        public Volume(string afn, string aln, string vt)
         {
-            this.authorFirstNameValue = afnv;
-            this.authorLastNameValue = alnv;
-            this.volumeTitleValue = vtv;
-        }
-
-        public string AuthorFirstName
-        {
-            get { return authorFirstNameValue; }
-            set
-            {
-                authorFirstNameValue = value;
-                OnPropertyChanged("AuthorFirstName");
-            }
-        }
-
-        public string AuthorLastName
-        {
-            get { return authorLastNameValue; }
-            set
-            {
-                authorLastNameValue = value;
-                OnPropertyChanged("AuthorLastName");
-            }
-        }
-
-        public string VolumeTitle
-        {
-            get { return volumeTitleValue; }
-            set
-            {
-                volumeTitleValue = value;
-                OnPropertyChanged("AuthorFirstName");
-            }
-        }
-
-        // Create the OnPropertyChanged method to raise the event 
-        protected void OnPropertyChanged(string name)
-        {
-            PropertyChangedEventHandler handler = PropertyChanged;
-            if (handler != null)
-            {
-                handler(this, new PropertyChangedEventArgs(name));
-            }
+            this.authorFirstName = afn;
+            this.authorLastName = aln;
+            this.volumeTitle = vt;
         }
 
     }

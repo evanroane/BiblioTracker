@@ -75,11 +75,19 @@
     <Compile Include="AddVolume.xaml.cs">
       <DependentUpon>AddVolume.xaml</DependentUpon>
     </Compile>
+    <Compile Include="EditVolume.xaml.cs">
+      <DependentUpon>EditVolume.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Model\Volume.cs" />
     <Compile Include="Repository\IVolumeRepository.cs" />
+    <Compile Include="Singleton.cs" />
     <Compile Include="VolumeContext.cs" />
     <Compile Include="Repository\VolumeRepository.cs" />
     <Page Include="AddVolume.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EditVolume.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

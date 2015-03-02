@@ -48,8 +48,8 @@ namespace BiblioTrack.Repository
         //Create
         public void Add(Model.Volume V)
         {
-            MainWindow.col.Add(V);
-            MainWindow.col = GetObservableVolumes();
+            //MainWindow.col.Add(V);
+            //MainWindow.col = GetObservableVolumes();
             _dbContext.Volumes.Add(V);
             _dbContext.SaveChanges();
         }
@@ -66,7 +66,7 @@ namespace BiblioTrack.Repository
         public Model.Volume GetById(int id)
         {
             var lq = from v in _dbContext.Volumes
-                     where v.VolumeId == id
+                     where v.volumeId == id
                      select v;
             return lq.First<Model.Volume>();
         }
