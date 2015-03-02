@@ -6,7 +6,7 @@
         <TextBox x:Name="Edit_Author_First_Name" HorizontalAlignment="Left" Height="23" Margin="10,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="Edit_Author_Last_Name" HorizontalAlignment="Left" Height="23" Margin="10,38,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="Edit_Volume_Title" HorizontalAlignment="Left" Height="23" Margin="10,66,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <Button Content="Save Changes" HorizontalAlignment="Left" Margin="10,94,0,0" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Save Changes" HorizontalAlignment="Left" Margin="10,94,0,0" VerticalAlignment="Top" Width="120" Click="Button_Click"/>
         <Label Content="Author First Name" HorizontalAlignment="Left" Margin="135,10,0,0" VerticalAlignment="Top"/>
         <Label Content="Author Last Name" HorizontalAlignment="Left" Margin="135,41,0,0" VerticalAlignment="Top"/>
         <Label Content="Volume Title" HorizontalAlignment="Left" Margin="135,72,0,0" VerticalAlignment="Top"/>
