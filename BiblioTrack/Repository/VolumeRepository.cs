@@ -48,19 +48,27 @@ namespace BiblioTrack.Repository
         //Create
         public void Add(Model.Volume V)
         {
-            //MainWindow.col.Add(V);
-            //MainWindow.col = GetObservableVolumes();
             _dbContext.Volumes.Add(V);
             _dbContext.SaveChanges();
         }
 
         //Read
-        public ObservableCollection<Model.Volume> All()
+        public List<Model.Volume> All()
         {
             var query = from Volume in _dbContext.Volumes
                         select Volume;
-            //return query.ToList<Model.Volume>();
-            return new ObservableCollection<Model.Volume>(query);
+            return query.ToList<Model.Volume>();
+            //return new ObservableCollection<Model.Volume>(query);
+        }
+
+        public int GetId(string authorFirstName, string authorLastName, string volumeTitle)
+        {
+            var query = from Volume in _dbContext.Volumes
+                 where (Volume.authorFirstName == authorFirstName &&
+                        Volume.authorLastName == authorLastName &&
+                        Volume.volumeTitle == volumeTitle)
+                        select Volume;
+            return query.First<Model.Volume>().volumeId;
         }
 
         public Model.Volume GetById(int id)
@@ -72,9 +80,12 @@ namespace BiblioTrack.Repository
         }
 
         //Update
-        public void UpdateVolume(Model.Volume V)
+        public void UpdateVolume(Model.Volume vol, string a, string b, string c)
         {
-            throw new NotImplementedException();
+            vol.authorFirstName = a;
+            vol.authorLastName = b;
+            vol.volumeTitle = c;
+            _dbContext.SaveChanges();
         }
 
         //Delete

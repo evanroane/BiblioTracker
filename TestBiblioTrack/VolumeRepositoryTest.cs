@@ -71,7 +71,7 @@ namespace TestBiblioTrack
             repo.Add(new Volume("Tom", "Robbins", "Villa Incognito"));
             repo.Add(new Volume("Plato", "Aristocles", "Symposium"));
             var all = repo.All();
-            Assert.AreEqual(2, (all as ObservableCollection<Volume>).Count);
+            Assert.AreEqual(2, (all as List<Volume>).Count);
 
         }
 
@@ -94,15 +94,15 @@ namespace TestBiblioTrack
             Assert.AreEqual(0, repo.GetCount());
         }
 
-        //[TestMethod]
-        //public void TestUpdate()
-        //{
-        //    repo.Clear();
-        //    repo.Add(new Volume("Tom", "Robbins", "Villa Incognito"));
-            
-
-        //    Assert.AreEqual("Smith", AuthorLastName);
-        //}
+        [TestMethod]
+        public void TestUpdateVolume()
+        {
+            repo.Clear();
+            Volume vol = new Volume("Tom", "Smith", "Villa Incognito");
+            repo.Add(vol);
+            repo.UpdateVolume(vol, "Tom", "Robbins", "Villa Incognito");
+            Assert.AreEqual("Robbins", vol.authorLastName.ToString());
+        }
     }
 }
 
