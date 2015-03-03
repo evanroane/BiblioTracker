@@ -35,7 +35,7 @@ namespace BiblioTrack
             InitializeComponent();
             ViewPort.DataContext = repo.Context().Volumes.Local;
             add_volume_window = new AddVolume();
-            //Category_Box.DataContext = repo.
+            //Category_Box.DataContext = repo.GetAllGenres();
         }
 
         private void Button_Add_Click(object sender, RoutedEventArgs e)
@@ -56,25 +56,23 @@ namespace BiblioTrack
                 Window edit_volume_window = new EditVolume(selectedVolume);
                 edit_volume_window.Show();
             }
-            //MessageBox.Show(
-            //    string.Format(
-            //        "The Volume you double clicked on is - First Name: {0}, Last Name: {1}, Volume Title: {2}"
-            //        , selectedVolume.authorFirstName, selectedVolume.authorLastName, selectedVolume.volumeTitle)
-            //    );
         }
 
         private void For_Sale_Checked(object sender, RoutedEventArgs e)
         {
             var selectedVolume = ViewPort.SelectedItem as Volume;
-            MessageBox.Show(
-                string.Format(
-                    "You Checked - VolId: {0}, Last Name: {1}, Volume Title: {2}"
-                    , selectedVolume.volumeId, selectedVolume.authorLastName, selectedVolume.volumeTitle)
-                );
+            repo.UpdateSaleStatus(selectedVolume, true);            
+            //MessageBox.Show(
+            //    string.Format(
+            //        "You Checked - VolId: {0}, Last Name: {1}, Volume Title: {2}"
+            //        , selectedVolume.volumeId, selectedVolume.authorLastName, selectedVolume.volumeTitle)
+            //    );
         }
 
         private void For_Sale_UnChecked(object sender, RoutedEventArgs e)
         {
+            var selectedVolume = ViewPort.SelectedItem as Volume;
+            repo.UpdateSaleStatus(selectedVolume, false);
 
         }
 

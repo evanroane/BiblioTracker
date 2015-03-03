@@ -17,9 +17,11 @@ namespace BiblioTrack.Repository
         void DeleteVolume(Volume V);
         void DeleteVolumeById(int id);
         void UpdateVolume(Model.Volume vol, string a, string b, string c);
+        void UpdateSaleStatus(Model.Volume vol, bool a);
         void Clear();
         List<Volume> All();
         Volume GetById(int id);
+        //List<Volume> GetAllByGenre();
         IQueryable<Volume> SearchFor(Expression<Func<Volume, bool>> predicate);
     }
 }

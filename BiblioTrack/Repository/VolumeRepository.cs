@@ -79,12 +79,33 @@ namespace BiblioTrack.Repository
             return lq.First<Model.Volume>();
         }
 
+        //public List<Model.Volume> GetAllByGenre(string genre)
+        //{
+        //    var lq = from v in _dbContext.Volumes
+        //             where v.volumeGenre == genre
+        //             select v;
+        //    return lq.ToList<Model.Volume>();
+        //}
+
+        //public List<string> GetAllGenres()
+        //{
+        //    var lq = from v.genreName in _dbContext.Volumes
+        //             select v;
+        //    return lq.ToList<string>();
+        //}
+
         //Update
         public void UpdateVolume(Model.Volume vol, string a, string b, string c)
         {
             vol.authorFirstName = a;
             vol.authorLastName = b;
             vol.volumeTitle = c;
+            _dbContext.SaveChanges();
+        }
+
+        public void UpdateSaleStatus(Model.Volume vol, bool a)
+        {
+            vol.forSale = a;
             _dbContext.SaveChanges();
         }
 

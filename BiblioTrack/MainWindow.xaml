@@ -9,29 +9,10 @@
         </Grid.Background>
         <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Orientation="Horizontal"/>
         <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Orientation="Horizontal">
-            <ComboBox x:Name="Category_Box" HorizontalAlignment="Left" Margin="5,5,0,0" VerticalAlignment="Top" Width="150" Height="30" FontSize="14"/>
-            <Button x:Name="Button_View" Content="View Category" Margin="5,5,0,0" Width="150" Height="30" FontSize="14"/>
             <Button x:Name="Button_Add" Content="Add New Volume" Margin="5,5,0,0" Width="150" Height="30" Click="Button_Add_Click" FontSize="14"/>
             <Button x:Name="Delete_Selected" Content="Delete Selected" HorizontalAlignment="Left" Margin="5,5,0,0" VerticalAlignment="Top" Width="150" Height="30" FontSize="14" Click="Delete_Selected_Click"/>
         </StackPanel>
-        <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,5,5" ShowGridLines="False" Width="160" Height="100">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition />
-                <ColumnDefinition Width="60" />
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition />
-                <RowDefinition />
-                <RowDefinition />
-            </Grid.RowDefinitions>
-            <TextBox x:Name="Box_Total_Volumes" Grid.Row="0" Grid.Column="0" Height="23" TextWrapping="Wrap" Text="Total Volumes:" IsReadOnly="true" Background="#E5686868" BorderThickness="0,0,0,1" Margin="0,0,0,0" FontSize="14"></TextBox>
-            <TextBox x:Name="Box_For_Sale" Grid.Row="1" Grid.Column="0" Height="23" TextWrapping="Wrap" Text="For Sale:" IsReadOnly="true" Background="#E5686868" BorderThickness="0,0,0,1" Margin="0,0,0,0" FontSize="14"></TextBox>
-            <TextBox x:Name="Box_Sold" Grid.Row="2" Grid.Column="0" Height="23" TextWrapping="Wrap" Text="Sold:" IsReadOnly="true" Background="#E5686868" BorderThickness="0,0,0,1" Margin="0,0,0,0" FontSize="14"></TextBox>
-            <TextBox x:Name="Box_Total_Volumes_Num" Grid.Row="0" Grid.Column="1" Height="23" TextWrapping="Wrap" Text="0" IsReadOnly="true" Background="#E5686868" BorderThickness="0,0,0,1" Margin="0,0,0,0" TextAlignment="Right" FontSize="14"></TextBox>
-            <TextBox x:Name="Box_For_Sale_Num" Grid.Row="1" Grid.Column="1" Height="23" TextWrapping="Wrap" Text="0" IsReadOnly="true" Background="#E5686868" BorderThickness="0,0,0,1" Margin="0,0,0,0" TextAlignment="Right" FontSize="14"></TextBox>
-            <TextBox x:Name="Box_Sold_Num" Grid.Row="2" Grid.Column="1" Height="23" TextWrapping="Wrap" Text="0" IsReadOnly="true" Background="#E5686868" BorderThickness="0,0,0,1" Margin="0,0,0,0" TextAlignment="Right" FontSize="14"></TextBox>
-        </Grid>
-        <DataGrid x:Name="ViewPort" IsReadOnly="True" ItemsSource="{Binding}" HorizontalAlignment="Left" VerticalAlignment="Top" Height="320" Width="512" Margin="10,40,0,0" AutoGenerateColumns="False" AlternatingRowBackground="Gainsboro"  AlternationCount="2" MinColumnWidth="50" Background="#D8F0F0F0" Opacity="0.85">
+        <DataGrid x:Name="ViewPort" IsReadOnly="True" ItemsSource="{Binding}" HorizontalAlignment="Left" VerticalAlignment="Top" Height="320" Margin="5,40,0,10" AutoGenerateColumns="False" AlternatingRowBackground="Gainsboro"  AlternationCount="2" MinColumnWidth="50" Background="#D8F0F0F0" Opacity="0.85">
             <DataGrid.Resources>
                 <Style TargetType="DataGridRow">
                     <EventSetter Event="MouseDoubleClick" Handler="Row_DoubleClick"/>
@@ -52,7 +33,7 @@
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
-                <DataGridTemplateColumn Header="Volume Title" Width="150" IsReadOnly="True" CanUserSort="True">
+                <DataGridTemplateColumn Header="Volume Title" Width="*" IsReadOnly="True" CanUserSort="True">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <TextBlock Text="{Binding volumeTitle}" />
@@ -62,7 +43,7 @@
                 <DataGridTemplateColumn Header="For Sale" Width="52"  IsReadOnly="False">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <CheckBox Margin="0,0,0,0" HorizontalAlignment="Center" Checked="For_Sale_Checked" Unchecked="For_Sale_UnChecked"/>
+                            <CheckBox DataContext="{Binding forSale}" Margin="0,0,0,0" HorizontalAlignment="Center" Checked="For_Sale_Checked" Unchecked="For_Sale_UnChecked"/>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>

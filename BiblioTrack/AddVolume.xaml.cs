@@ -34,7 +34,8 @@ namespace BiblioTrack
             string auth_first_name = Auth_First_Name.Text;
             string auth_last_name = Auth_Last_Name.Text;
             string vol_title = Vol_Title.Text;
-            vol = new Volume(auth_first_name, auth_last_name, vol_title);
+            bool for_sale = false;
+            vol = new Volume(auth_first_name, auth_last_name, vol_title, for_sale);
             var mainWindow = Application.Current.Windows
                 .Cast<Window>()
                 .FirstOrDefault(window => window is MainWindow) as MainWindow;

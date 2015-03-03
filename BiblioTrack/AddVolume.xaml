@@ -3,12 +3,12 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="AddToLibrary" Height="300" Width="300" Background="Gray">
     <Grid>
-        <TextBox x:Name="Auth_First_Name" HorizontalAlignment="Left" Height="23" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="Auth_Last_Name" HorizontalAlignment="Left" Height="23" Margin="10,38,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="Vol_Title" HorizontalAlignment="Left" Height="23" Margin="10,66,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Author First Name" HorizontalAlignment="Left" Margin="135,10,0,0" VerticalAlignment="Top"/>
-        <Label Content="Author Last Name" HorizontalAlignment="Left" Margin="135,41,0,0" VerticalAlignment="Top"/>
-        <Label Content="Volume Title" HorizontalAlignment="Left" Margin="135,72,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="Auth_First_Name" HorizontalAlignment="Left" Height="23" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="167"/>
+        <TextBox x:Name="Auth_Last_Name" HorizontalAlignment="Left" Height="23" Margin="10,38,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="167"/>
+        <TextBox x:Name="Vol_Title" HorizontalAlignment="Left" Height="23" Margin="10,66,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="167"/>
+        <Label Content="Author First Name" HorizontalAlignment="Left" Margin="182,10,0,0" VerticalAlignment="Top" Width="107"/>
+        <Label Content="Author Last Name" HorizontalAlignment="Left" Margin="182,41,0,0" VerticalAlignment="Top" Width="106"/>
+        <Label Content="Volume Title" HorizontalAlignment="Left" Margin="182,72,0,0" VerticalAlignment="Top" Width="77"/>
         <Button x:Name="Save_Vol" Content="Save New Volume" HorizontalAlignment="Left" Margin="10,94,0,0" VerticalAlignment="Top" Width="120" Click="Save_Vol_Click"/>
     </Grid>
 </Window>

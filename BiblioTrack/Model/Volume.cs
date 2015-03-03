@@ -14,17 +14,19 @@ namespace BiblioTrack.Model
         public string authorFirstName { get; set; }
         public string authorLastName { get; set; }
         public string volumeTitle { get; set; }
+        public bool forSale { get; set; }
 
         public event PropertyChangedEventHandler PropertyChanged;
 
         public Volume() { }
 
         // NOTE: after changing this.values, either migrate or wipe db
-        public Volume(string afn, string aln, string vt)
+        public Volume(string afn, string aln, string vt, bool fs)
         {
             this.authorFirstName = afn;
             this.authorLastName = aln;
             this.volumeTitle = vt;
+            this.forSale = false;
         }
 
     }
