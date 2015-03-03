@@ -95,6 +95,12 @@ namespace BiblioTrack.Repository
             _dbContext.SaveChanges();
         }
 
+        public void DeleteVolumeById(int id)
+        {
+            Model.Volume vol = GetById(id);
+            DeleteVolume(vol);
+        }
+
         public void Clear()
         {
             var a = this.All();

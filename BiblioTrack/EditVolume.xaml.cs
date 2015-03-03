@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BiblioTrack.Repository;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,6 +20,7 @@ namespace BiblioTrack
     /// </summary>
     public partial class EditVolume : Window
     {
+        //private VolumeRepository repo;
         private Model.Volume VolumeToEdit;
         public EditVolume(Model.Volume V)
         {
@@ -42,6 +44,7 @@ namespace BiblioTrack
             Edit_Author_First_Name.Text = "";
             Edit_Author_Last_Name.Text = "";
             Edit_Volume_Title.Text = "";
+            mainWindow.ViewPort.DataContext = mainWindow.repo.All();
         }
 
     }

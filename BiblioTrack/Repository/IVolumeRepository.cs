@@ -15,6 +15,7 @@ namespace BiblioTrack.Repository
         int GetCount();
         void Add(Volume V);
         void DeleteVolume(Volume V);
+        void DeleteVolumeById(int id);
         void UpdateVolume(Model.Volume vol, string a, string b, string c);
         void Clear();
         List<Volume> All();
